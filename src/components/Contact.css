@@ -1,0 +1,123 @@
+.contact {
+    background: var(--color-bg-primary);
+    padding-bottom: var(--spacing-lg);
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    text-align: center;
+    padding: var(--spacing-2xl);
+}
+
+.contact-card h3 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-md);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact-card p {
+    font-size: var(--font-size-lg);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-xl);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-md);
+    color: var(--color-text-primary);
+    font-weight: 600;
+    font-size: var(--font-size-lg);
+    transition: all var(--transition-base);
+}
+
+.social-link:hover {
+    background: var(--social-color);
+    border-color: var(--social-color);
+    transform: translateX(8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: var(--glass-bg);
+    border-radius: var(--border-radius-sm);
+}
+
+.social-name {
+    flex: 1;
+    text-align: left;
+}
+
+.footer {
+    margin-top: var(--spacing-3xl);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--glass-border);
+    text-align: center;
+}
+
+.footer p {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-xs);
+}
+
+.heart {
+    color: hsl(0, 70%, 60%);
+    display: inline-block;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    10%,
+    30% {
+        transform: scale(1.1);
+    }
+
+    20%,
+    40% {
+        transform: scale(1);
+    }
+}
+
+.footer-year {
+    opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+    .social-link {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-name {
+        text-align: center;
+    }
+}
