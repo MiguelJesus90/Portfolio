@@ -27,7 +27,9 @@ export default function ProjectCard({ project }) {
                 )}
             </div>
 
-            <p className="project-description">{project.description}</p>
+            <p className={`project-description ${!project.description ? 'italic text-muted' : ''}`}>
+                {project.description || 'Sin descripción disponible.'}
+            </p>
 
             {project.topics && project.topics.length > 0 && (
                 <div className="project-topics">
